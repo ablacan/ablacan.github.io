@@ -18,3 +18,14 @@ Feel free to explore and learn more about my work and thoughts!
 
 ## Recent Posts
 
+Welcome to my website!
+
+## More info
+
+- [About Me]({% link about.md %})
+- [My Research]({% link research.md %})
+- [My Publications]({% link publications.md %})
+- [Contact Me]({% link contact.md %})
+
+
+
