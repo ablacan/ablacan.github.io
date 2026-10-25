@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   <!-- ?v= changes on every build so browsers never keep an outdated stylesheet -->
   <link rel="stylesheet" href="{{ "/assets/css/site.css" | relative_url }}?v={{ site.time | date: '%s' }}">
+  <!-- Makes protected email addresses clickable (see _includes/email.html) -->
+  <script src="{{ "/assets/js/email.js" | relative_url }}" defer></script>
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}

@@ -12,15 +12,12 @@ I am always happy to discuss research topics, teaching opportunities or major to
 ## Emails
 {: .sticker}
 
-- **Personal (best):** alice(dot)b(dot)lacan(at)gmail(dot)com
-- **Academic 1 (current):** alice(dot)lacan(at)minesparis(dot)psl(dot)eu
-- **Academic 2 (current):** alice(dot)lacan(at)curie(dot)fr
-- **Teaching (current):** alice(dot)lacan(at)psl(dot)fr
+- **Personal (best):** {% include email.html user="alice.b.lacan" domain="gmail.com" %}
+- **Academic 1 (current):** {% include email.html user="alice.lacan" domain="minesparis.psl.eu" %}
+- **Academic 2 (current):** {% include email.html user="alice.lacan" domain="curie.fr" %}
+- **Teaching (current):** {% include email.html user="alice.lacan" domain="psl.fr" %}
 
-<span class="warning">Out-of-date:</span>
-
-- Former Inria: alice-athenais(dot)lacan(at)inria(dot)fr
-- Former Univ. Evry: alice(dot)lacan(at)univ-evry(dot)fr
+<span class="warning">Out-of-date:</span> my former Inria and Univ. Évry addresses are no longer read.
 
 ## Office
 {: .sticker}

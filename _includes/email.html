@@ -1,0 +1,11 @@
+{%- comment -%}
+  A clickable email address, protected from spam bots.
+
+  Usage:
+    {% include email.html user="alice.b.lacan" domain="gmail.com" %}
+
+  The full address never appears in the page source: user and domain are stored
+  reversed, and assets/js/email.js rebuilds the clickable link in the visitor's browser.
+  Without JavaScript, visitors see the "alice(dot)b(dot)lacan(at)gmail(dot)com" form.
+{%- endcomment -%}
+<span class="email" data-u="{{ include.user | split: '' | reverse | join: '' }}" data-d="{{ include.domain | split: '' | reverse | join: '' }}">{{ include.user | replace: '.', '(dot)' }}(at){{ include.domain | replace: '.', '(dot)' }}</span>
