@@ -9,7 +9,7 @@ illustration_offset: red   # outline colour: red, orange, blue, green or yellow
 # Alice Lacan, Ph.D.
 
 Junior AI Fellow · CBIO, Mines Paris - PSL & Institut Curie
-{: .hero-role}
+{: .hero-role .highlight}
 
 I am currently a Junior AI Fellow, funded by a 3-year PR[AI]RIE AI Fellowship. I work with [Eloïse Berson](https://elo-nsrb.github.io/eloiseberson/team.html) at the Centre for Computational Biology ([CBIO](https://www.minesparis.psl.eu/cbio/)) at Mines Paris - PSL & Institut Curie (unit U1331), while also teaching in the International Bachelor of Science in AI (IBSAI) from Univ. PSL. 
 

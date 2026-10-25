@@ -163,7 +163,8 @@ a:hover { color: var(--red); }
   margin: 1rem 0 2.5rem;
 }
 .hero-text h1 { font-size: 2.6rem; font-weight: 700; margin-bottom: 0.2rem; }
-.hero-role { font-family: var(--font-title); color: var(--red); font-weight: 500; margin-bottom: 1.2rem; }
+/* Job title under the name (the yellow stroke comes from .highlight, section 7) */
+.hero-role { font-family: var(--font-title); font-weight: 500; margin: 0.2rem 0 1.4rem; }
 .hero-text p { line-height: 1.6; }
 .hero-links a {
   display: inline-block;
@@ -180,27 +181,16 @@ a:hover { color: var(--red); }
 .hero-links a:nth-child(4n+3):hover { background: var(--red); color: #fff; }
 .hero-links a:nth-child(4n+4):hover { background: var(--ink); color: #fff; }
 
-/* "Updates": a newspaper clipping taped on the page, with a coloured offset
-   like the illustrations (change --clipping-offset to var(--yellow), var(--blue)...) */
+/* "Updates": a newspaper clipping on the page, with a coloured offset
+   like the illustrations (change --clipping-offset to var(--yellow), var(--orange)...) */
 .clipping {
-  --clipping-offset: var(--orange);
+  --clipping-offset: var(--blue);
   position: relative;
   background: var(--newsprint);
   padding: 1.2rem 1.5rem 1rem;
   margin: 1rem 0 2.5rem;
   box-shadow: 9px 8px 0 var(--clipping-offset);
   transform: rotate(-0.6deg);
-}
-.clipping::before {            /* the piece of tape */
-  content: "";
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  width: 110px;
-  height: 26px;
-  background: var(--yellow);
-  opacity: 0.75;
-  transform: translateX(-50%) rotate(2deg);
 }
 .clipping-head {
   text-align: center;
@@ -212,7 +202,7 @@ a:hover { color: var(--red); }
 .post-content .clipping-title, .clipping-title {
   font-family: var(--font-news);
   font-weight: 900;
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   margin: 0;
@@ -233,7 +223,7 @@ a:hover { color: var(--red); }
   font-weight: 700;
   font-size: 0.85rem;
   text-transform: uppercase;
-  color: var(--red);
+  color: var(--blue);
   padding-top: 0.1rem;
 }
 
@@ -247,8 +237,32 @@ a:hover { color: var(--red); }
   padding-bottom: 0.25rem;
   border-bottom: 2px solid var(--ink);
 }
-/* Yellow button with a hard shadow (e.g. "Download CV") */
-.btn {
+/* "Highlighter pen" stroke behind a text: a slightly tilted yellow band with uneven ends.
+   Markdown: add {: .highlight} on the line after a paragraph or title.
+   HTML: <span class="highlight">some text</span> */
+.highlight {
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+  color: var(--ink);
+  padding: 0 0.3rem;
+}
+.highlight::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: -0.2rem;
+  right: -0.4rem;
+  top: 0.35em;          /* lower = covers more of the text height */
+  bottom: -0.05em;
+  background: var(--yellow);
+  opacity: 0.85;
+  border-radius: 0.6em 0.25em 0.5em 0.2em;
+  transform: rotate(-1.2deg) skewX(-12deg);   /* the tilt */
+}
+/* Yellow box with a hard shadow: .btn for links ("Download CV"),
+   .sticker for titles or text (Markdown: {: .sticker} after a title) */
+.btn, .sticker {
   display: inline-block;
   padding: 0.35rem 0.9rem;
   border: 2px solid var(--ink);
@@ -259,6 +273,9 @@ a:hover { color: var(--red); }
   box-shadow: 3px 3px 0 var(--ink);
 }
 .btn:hover { transform: translate(1px, 1px); box-shadow: 2px 2px 0 var(--ink); }
+.post-content h2.sticker { font-size: 1.15rem; margin: 1.6rem 0 0.9rem; }
+/* Small red warning word, e.g. "Out-of-date" */
+.warning { color: var(--red); font-weight: 700; }
 /* Blue link with a small arrow head before it, like "Summary" (add class="arrow-link" to any <a>) */
 .arrow-link { color: var(--blue); font-weight: 600; }
 .arrow-link::before { content: "\25B6"; font-size: 0.7em; margin-right: 0.35em; vertical-align: 0.1em; }
