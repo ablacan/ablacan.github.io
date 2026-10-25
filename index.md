@@ -4,6 +4,11 @@ title: Home
 illustration: /assets/img/illustrations/home.webp
 illustration_alt: Cartoon of Alice, thinking
 illustration_offset: red   # outline colour: red, orange, blue, green or yellow
+# Small grey note at the very bottom of the home page (Markdown allowed)
+credits: >-
+  **About this website's design:** the shapes and colours are inspired by Wassily Kandinsky's paintings,
+  the coloured offsets and newspaper clipping by Andy Warhol's screen prints and collages (e.g. *Daily News*, c. 1967),
+  and the cartoon illustrations are derived from Pinterest illustrations.
 ---
 
 # Alice Lacan, Ph.D.

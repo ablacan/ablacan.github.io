@@ -5,6 +5,7 @@ layout: base
   Home page layout. The text comes from index.md, the updates from _data/news.yml.
   The illustration is set in the front matter of index.md:
     illustration, illustration_alt, and optionally illustration_offset (red, orange, blue, green, yellow).
+  The small grey note at the bottom comes from `credits:` in the same front matter.
 {%- endcomment -%}
 
 <div class="home">
@@ -32,5 +33,9 @@ layout: base
       {%- endfor %}
     </ul>
   </section>
+
+  {%- if page.credits %}
+  <div class="credits">{{ page.credits | markdownify }}</div>
+  {%- endif %}
 
 </div>

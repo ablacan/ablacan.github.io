@@ -227,6 +227,10 @@ a:hover { color: var(--red); }
   padding-top: 0.1rem;
 }
 
+/* Design credits at the bottom of the home page (text: `credits:` in index.md) */
+.credits { color: var(--muted); font-size: 0.9rem; line-height: 1.5; margin: 0 0 1.5rem; }
+.credits strong { color: var(--muted); }
+
 
 /* 7. SHARED PIECES -------------------------------------------------------- */
 /* Section headings used in lists (publications, teaching, CV) */
