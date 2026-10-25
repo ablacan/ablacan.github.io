@@ -1,17 +1,10 @@
-<footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
-
-  <div class="wrapper">
-    <div class="footer-col-wrapper">
-      <div class="footer-col">
-        <ul class="contact-list">
-          <li class="p-name">{{ site.author.name | escape }}</li>
-          <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        {%- include social.html -%}
-      </div>
-    </div>
+{%- comment -%}
+  Bottom bar: name, contact page and social links (links are set in `social_links`, _config.yml).
+{%- endcomment -%}
+<footer class="site-footer">
+  <div class="wrapper footer-row">
+    <span class="footer-name">© {{ site.time | date: "%Y" }} {{ site.author.name | escape }}</span>
+    <a href="{{ '/contact/' | relative_url }}">Contact</a>
+    {%- include social.html -%}
   </div>
 </footer>

@@ -2,15 +2,13 @@
 layout: page
 title: CV
 permalink: /cv/
+intro: >-
+  [Download CV (PDF)](/assets/files/Alice_Lacan_CV.pdf){: .btn target="_blank"}
+illustration: /assets/img/illustrations/cv.webp
+illustration_alt: Cartoon of Alice unrolling a long scroll
+illustration_style: yellow
+illustration_offset: orange
 ---
-
-<p class="cv-actions">
-  <a class="btn" href="{{ '/assets/files/Alice_Lacan_CV.pdf' | relative_url }}" target="_blank">Download CV (PDF)</a>
-  <span>Publications, talks and teaching have their own pages:
-  <a href="{{ '/publications/' | relative_url }}">Publications</a> ·
-  <a href="{{ '/presentations/' | relative_url }}">Presentations</a> ·
-  <a href="{{ '/teaching/' | relative_url }}">Teaching</a></span>
-</p>
 
 {% for s in site.data.cv %}
 <section class="cv-section">
@@ -19,7 +17,7 @@ permalink: /cv/
   <div class="cv-entry">
     <span class="cv-date">{{ e.date }}</span>
     <div class="cv-body">
-      <span class="cv-title">{{ e.title }}</span>{% if e.link %} <a class="cv-link" href="{{ e.link }}" target="_blank" rel="noopener">link&nbsp;↗</a>{% endif %}
+      <span class="cv-title">{{ e.title }}</span>{% if e.link %} <a class="cv-link arrow-link" href="{{ e.link }}" target="_blank" rel="noopener">Link</a>{% endif %}
       {%- if e.org %}<span class="cv-org">{{ e.org }}{% if e.place %}, {{ e.place }}{% endif %}</span>{% endif %}
       {%- if e.details %}<span class="cv-details">{{ e.details }}</span>{% endif %}
     </div>

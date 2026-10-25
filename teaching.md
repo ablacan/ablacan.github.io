@@ -2,9 +2,13 @@
 layout: page
 title: Teaching
 permalink: /teaching/
+intro: >-
+  I teach statistics, mathematics and machine learning, from first-year Bachelor students to Master students and professionals.
+illustration: /assets/img/illustrations/teaching.webp
+illustration_alt: Cartoon of Alice writing on a blackboard
+illustration_style: yellow
+illustration_offset: green
 ---
-
-I teach statistics, mathematics and machine learning, from first-year Bachelor students to Master students and professionals.
 
 {% assign current = site.data.teaching | where: "current", true %}
 {% assign past = site.data.teaching | where_exp: "c", "c.current != true" %}

@@ -1,22 +1,244 @@
-/* Site-wide styles, loaded after minima's main.css (see _includes/head.html). */
+/* ==========================================================================
+   Site styles — loaded after minima's main.css (see _includes/head.html).
 
+   Contents
+     1. Settings: colours & fonts   ← change the look of the whole site here
+     2. Base (text, links, headings)
+     3. Header & menu
+     4. Footer
+     5. Illustrations (cartoon + coloured shapes) & page headers
+     6. Home: intro & "Updates" newspaper clipping
+     7. Shared pieces (list headings, buttons, labels)
+     8. Publications
+     9. Presentations
+    10. Teaching
+    11. CV
+    12. Research
+    13. Small screens (phones)
+   ========================================================================== */
+
+
+/* 1. SETTINGS ------------------------------------------------------------- */
 :root {
-  --ink: #1d1d1f;
-  --muted: #5f6368;
-  --line: #e4e1da;
-  --paper: #fbfaf7;
-  --card: #ffffff;
+  /* Palette (Kandinsky-like primaries on paper) */
+  --ink: #1d1d1f;        /* text, outlines */
+  --muted: #5f6368;      /* secondary text */
+  --line: #e4e1da;       /* thin separators */
+  --paper: #fbfaf7;      /* page background */
+  --card: #ffffff;       /* boxes */
+  --newsprint: #f3eee2;  /* "Updates" clipping */
   --blue: #1f4fa3;
   --red: #d6402b;
   --yellow: #f2c230;
+  --orange: #ee8a2a;
+  --green: #2f8f5b;
+
+  /* Fonts (Source Sans 3, Space Grotesk and Playfair are loaded from Google Fonts in _includes/head.html) */
+  --font-text: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;     /* body text */
+  --font-heading: "Helvetica Neue", Helvetica, Arial, sans-serif;        /* page titles, section titles, your name */
+  --font-title: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;    /* logo, menu, small labels */
+  --font-news: "Playfair Display", Georgia, serif;                       /* "Updates" masthead */
+  /* Width of the page content */
+  --page-width: 980px;
 }
 
-body { background: var(--paper); color: var(--ink); }
-.site-header { border-top-color: var(--ink); background: var(--paper); }
-.site-title, .site-title:visited { color: var(--ink); }
-a { color: var(--blue); }
-.post-content h2 { font-size: 1.5rem; }
 
+/* 2. BASE ----------------------------------------------------------------- */
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-text);
+  font-size: 17px;
+}
+.wrapper { max-width: calc(var(--page-width) - 60px); }
+h1, h2, h3, h4, .post-title { font-family: var(--font-heading); letter-spacing: -0.01em; }
+.site-title, .site-nav { font-family: var(--font-title); }
+.post-title { font-size: 2.4rem; font-weight: 700; }
+.post-content h2 { font-size: 1.5rem; font-weight: 700; }
+a { color: var(--blue); }
+a:hover { color: var(--red); }
+.note { color: var(--muted); font-size: 0.9rem; }
+
+
+/* 3. HEADER & MENU -------------------------------------------------------- */
+.site-header {
+  background: var(--paper);
+  border-top: 5px solid var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+.site-title, .site-title:visited {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.35rem;
+  color: var(--ink);
+}
+.site-logo { width: 30px; height: 30px; }
+.site-nav .page-link {
+  color: var(--ink);
+  font-weight: 600;
+  padding-bottom: 2px;
+  border-bottom: 3px solid transparent;
+}
+.site-nav .page-link:hover { color: var(--ink); text-decoration: none; border-bottom-color: var(--yellow); }
+.site-nav .page-link.is-active { border-bottom-color: var(--red); }
+
+
+/* 4. FOOTER --------------------------------------------------------------- */
+.site-footer { border-top: 1px solid var(--line); padding: 1.2rem 0; font-size: 0.9rem; }
+.footer-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem 1.2rem; }
+.footer-name { color: var(--muted); margin-right: auto; }
+.footer-links { list-style: none; margin: 0; display: flex; gap: 1.2rem; }
+
+
+/* 5. ILLUSTRATIONS --------------------------------------------------------
+   Markup: _includes/illustration.html.
+   - "style" (illustration--yellow/blue/red) sets the colours of the shapes behind.
+   - "offset" (offset--red/orange/...) sets the colour of the offset outline
+     around the drawing ("screen-print" effect, made with drop-shadow). */
+.illustration {
+  --shape-main: var(--yellow);
+  --shape-second: var(--blue);
+  --shape-third: var(--red);
+  --offset: var(--red);
+  position: relative;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.illustration--blue { --shape-main: var(--blue); --shape-second: var(--yellow); --shape-third: var(--red); }
+.illustration--red  { --shape-main: var(--red);  --shape-second: var(--yellow); --shape-third: var(--blue); }
+
+.offset--red    { --offset: var(--red); }
+.offset--orange { --offset: var(--orange); }
+.offset--blue   { --offset: var(--blue); }
+.offset--green  { --offset: var(--green); }
+.offset--yellow { --offset: var(--yellow); }
+
+.illustration-shapes {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.illustration-shapes > * { mix-blend-mode: multiply; }
+.shape-main   { fill: var(--shape-main); }
+.shape-second { fill: var(--shape-second); opacity: 0.85; }
+.shape-third  { fill: var(--shape-third); }
+.shape-accent { fill: var(--ink); }
+.shape-line   { stroke: var(--ink); stroke-width: 2.5; }
+
+.illustration img {
+  position: relative;
+  max-height: 440px;
+  width: auto;
+  filter: drop-shadow(8px 6px 0 var(--offset));
+  transition: transform 0.3s;
+}
+.illustration:hover img { transform: rotate(-2deg); }
+
+/* Header of inner pages: title + intro on the left, illustration on the right.
+   Shown when the page sets `illustration:` in its front matter (see _layouts/page.html). */
+.page-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(180px, 1fr);
+  gap: 2rem;
+  align-items: center;
+  margin: 0.5rem 0 1.5rem;
+}
+.page-hero .illustration img { max-height: 300px; }
+.page-intro { color: var(--muted); line-height: 1.55; }
+.page-intro p { margin-bottom: 0.8rem; }
+.page-intro .tag { vertical-align: 0.1em; margin-left: 0.2rem; }
+
+
+/* 6. HOME ----------------------------------------------------------------- */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(220px, 1fr);
+  gap: 2.5rem;
+  align-items: center;
+  margin: 1rem 0 2.5rem;
+}
+.hero-text h1 { font-size: 2.6rem; font-weight: 700; margin-bottom: 0.2rem; }
+.hero-role { font-family: var(--font-title); color: var(--red); font-weight: 500; margin-bottom: 1.2rem; }
+.hero-text p { line-height: 1.6; }
+.hero-links a {
+  display: inline-block;
+  margin: 0.3rem 0.4rem 0 0;
+  padding: 0.25rem 0.8rem;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+}
+.hero-links a:nth-child(4n+1):hover { background: var(--yellow); }
+.hero-links a:nth-child(4n+2):hover { background: var(--blue); color: #fff; }
+.hero-links a:nth-child(4n+3):hover { background: var(--red); color: #fff; }
+.hero-links a:nth-child(4n+4):hover { background: var(--ink); color: #fff; }
+
+/* "Updates": a newspaper clipping taped on the page, with a coloured offset
+   like the illustrations (change --clipping-offset to var(--yellow), var(--blue)...) */
+.clipping {
+  --clipping-offset: var(--orange);
+  position: relative;
+  background: var(--newsprint);
+  padding: 1.2rem 1.5rem 1rem;
+  margin: 1rem 0 2.5rem;
+  box-shadow: 9px 8px 0 var(--clipping-offset);
+  transform: rotate(-0.6deg);
+}
+.clipping::before {            /* the piece of tape */
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  width: 110px;
+  height: 26px;
+  background: var(--yellow);
+  opacity: 0.75;
+  transform: translateX(-50%) rotate(2deg);
+}
+.clipping-head {
+  text-align: center;
+  border-top: 3px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  padding: 0.3rem 0 0.2rem;
+  margin-bottom: 0.5rem;
+}
+.post-content .clipping-title, .clipping-title {
+  font-family: var(--font-news);
+  font-weight: 900;
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0;
+  line-height: 1.1;
+}
+.clipping-list { list-style: none; margin: 0; }
+.clipping-list li {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px dotted #b9b2a3;
+  line-height: 1.45;
+}
+.clipping-list li:last-child { border-bottom: 0; }
+.clipping-when {
+  flex: 0 0 6rem;
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: var(--red);
+  padding-top: 0.1rem;
+}
+
+
+/* 7. SHARED PIECES -------------------------------------------------------- */
 /* Section headings used in lists (publications, teaching, CV) */
 .list-heading {
   font-size: 1.15rem;
@@ -25,43 +247,38 @@ a { color: var(--blue); }
   padding-bottom: 0.25rem;
   border-bottom: 2px solid var(--ink);
 }
-.note { color: var(--muted); font-size: 0.9rem; }
-
-/* ---- Home ---- */
-.intro { margin-bottom: 2rem; }
-.intro-name { font-size: 2.2rem; margin-bottom: 0.2rem; }
-.intro-role { color: var(--muted); font-size: 1.05rem; margin-bottom: 1.2rem; }
-.intro-links { font-weight: 600; }
-
-.updates {
-  background: var(--card);
+/* Yellow button with a hard shadow (e.g. "Download CV") */
+.btn {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
   border: 2px solid var(--ink);
-  box-shadow: 6px 6px 0 var(--yellow);
-  padding: 1rem 1.25rem;
-  margin: 2rem 0;
-}
-.updates-heading {
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin: 0 0 0.6rem;
-}
-.updates-list { list-style: none; margin: 0; }
-.updates-list li {
-  display: flex;
-  gap: 1rem;
-  padding: 0.45rem 0;
-  border-top: 1px solid var(--line);
-  line-height: 1.45;
-}
-.updates-when {
-  flex: 0 0 5.5rem;
+  background: var(--yellow);
+  color: var(--ink) !important;
   font-weight: 700;
-  font-size: 0.9rem;
-  color: var(--red);
+  text-decoration: none !important;
+  box-shadow: 3px 3px 0 var(--ink);
 }
+.btn:hover { transform: translate(1px, 1px); box-shadow: 2px 2px 0 var(--ink); }
+/* Blue link with a small arrow head before it, like "Summary" (add class="arrow-link" to any <a>) */
+.arrow-link { color: var(--blue); font-weight: 600; }
+.arrow-link::before { content: "\25B6"; font-size: 0.7em; margin-right: 0.35em; vertical-align: 0.1em; }
+/* Small coloured labels (presentations): talk = blue, poster = red, anything else = yellow */
+.tag {
+  flex: 0 0 auto;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.1rem 0.45rem;
+  border-radius: 3px;
+  color: var(--ink);
+  background: var(--yellow);
+}
+.tag--talk { background: var(--blue); color: #fff; }
+.tag--poster { background: var(--red); color: #fff; }
 
-/* ---- Publications ---- */
+
+/* 8. PUBLICATIONS --------------------------------------------------------- */
 .pub {
   display: flex;
   gap: 1rem;
@@ -85,7 +302,8 @@ a { color: var(--blue); }
 .pub-pdf { flex: 0 0 auto; color: var(--red); margin-top: 0.15rem; transition: transform 0.15s; }
 .pub-pdf:hover { transform: rotate(-6deg) scale(1.08); }
 
-/* ---- Presentations ---- */
+
+/* 9. PRESENTATIONS -------------------------------------------------------- */
 .timeline-year { display: flex; gap: 1.2rem; }
 .post-content .timeline-year .year {
   flex: 0 0 3.5rem;
@@ -101,22 +319,8 @@ a { color: var(--blue); }
 .talk-links { margin-top: 0.25rem; font-size: 0.85rem; }
 .btn-video { color: var(--red) !important; }
 
-.tag {
-  flex: 0 0 auto;
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  padding: 0.1rem 0.45rem;
-  border-radius: 3px;
-  /* Highlighted events (invited talk, organizer, ...) by default */
-  color: var(--ink);
-  background: var(--yellow);
-}
-.tag--talk { background: var(--blue); color: #fff; }
-.tag--poster { background: var(--red); color: #fff; }
 
-/* ---- Teaching ---- */
+/* 10. TEACHING ------------------------------------------------------------ */
 .courses { list-style: none; margin: 0; }
 .course { display: flex; gap: 1rem; padding: 0.5rem 0; border-bottom: 1px solid var(--line); }
 .course-year { flex: 0 0 6.5rem; font-weight: 700; font-size: 0.9rem; color: var(--red); padding-top: 0.1rem; }
@@ -125,40 +329,49 @@ a { color: var(--blue); }
 .course-hours { font-size: 0.75rem; font-weight: 700; background: var(--yellow); padding: 0.05rem 0.4rem; border-radius: 3px; margin-left: 0.3rem; }
 .course-meta { margin: 0.1rem 0 0; font-size: 0.88rem; color: var(--muted); line-height: 1.4; }
 
-/* ---- CV ---- */
+/* 11. CV ------------------------------------------------------------------ */
 .cv-actions { display: flex; flex-wrap: wrap; gap: 0.6rem 1rem; align-items: center; font-size: 0.9rem; color: var(--muted); }
-.btn {
-  display: inline-block;
-  padding: 0.35rem 0.9rem;
-  border: 2px solid var(--ink);
-  background: var(--yellow);
-  color: var(--ink) !important;
-  font-weight: 700;
-  text-decoration: none !important;
-  box-shadow: 3px 3px 0 var(--ink);
-}
-.btn:hover { transform: translate(1px, 1px); box-shadow: 2px 2px 0 var(--ink); }
 .cv-section .list-heading { margin-top: 1.5rem; }
 .cv-entry { display: flex; gap: 1rem; padding: 0.3rem 0; line-height: 1.4; }
 .cv-date { flex: 0 0 8rem; font-size: 0.88rem; color: var(--muted); padding-top: 0.05rem; }
 .cv-body { flex: 1; min-width: 0; }
 .cv-title { font-weight: 600; }
 .cv-org, .cv-details { display: block; font-size: 0.9rem; color: var(--muted); }
-.cv-link { font-size: 0.8rem; }
+.cv-link { font-size: 0.85rem; margin-left: 0.4rem; }
 
-/* ---- Research ---- */
+
+/* 12. RESEARCH ------------------------------------------------------------ */
 .topic { margin-bottom: 1.6rem; }
 .topic h2 { margin-bottom: 0.4rem; }
+/* A small Kandinsky shape before each topic title. Shapes repeat every 5 topics,
+   so a new <section class="topic"> gets one automatically. */
+.topic h2::before {
+  content: "";
+  display: inline-block;
+  width: 0.9em;
+  height: 0.9em;
+  margin-right: 0.5rem;
+  vertical-align: -0.05em;
+}
+.topic:nth-of-type(5n+1) h2::before { background: var(--yellow); border-radius: 50%; }
+.topic:nth-of-type(5n+2) h2::before { background: var(--blue); clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+.topic:nth-of-type(5n+3) h2::before { background: var(--red); transform: rotate(45deg) scale(0.8); }
+.topic:nth-of-type(5n+4) h2::before { background: var(--ink); border-radius: 1em 1em 0 0; height: 0.45em; }
+.topic:nth-of-type(5n+5) h2::before { border: 3px solid var(--green); border-radius: 50%; box-sizing: border-box; }
 .topic p { text-align: justify; }
 .topic-when { font-size: 0.8rem; font-weight: 600; color: var(--red); margin-left: 0.4rem; white-space: nowrap; }
 
-/* ---- Footer ---- */
-.footer-links { list-style: none; margin: 0; }
-.footer-links li { display: inline; margin-right: 1rem; }
 
-/* ---- Small screens ---- */
-@media (max-width: 600px) {
-  .updates-list li, .course, .cv-entry, .timeline-year { flex-direction: column; gap: 0.15rem; }
-  .updates-when, .course-year, .cv-date, .timeline-year .year { flex-basis: auto; }
+/* 13. SMALL SCREENS ------------------------------------------------------- */
+@media (max-width: 700px) {
+  .hero { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+  .hero .illustration { order: -1; }
+  .page-hero { grid-template-columns: minmax(0, 1fr); gap: 0.5rem; }
+  .page-hero .illustration img { max-height: 220px; }
+  .illustration img { max-height: 300px; }
+  .hero-text h1 { font-size: 2rem; }
+  .clipping { transform: none; padding: 1rem; }
+  .clipping-list li, .course, .cv-entry, .timeline-year { flex-direction: column; gap: 0.15rem; }
+  .clipping-when, .course-year, .cv-date, .post-content .timeline-year .year { flex-basis: auto; }
   .talk-head { flex-direction: column; gap: 0.2rem; }
 }

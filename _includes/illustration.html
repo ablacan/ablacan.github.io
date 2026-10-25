@@ -1,0 +1,29 @@
+{%- comment -%}
+  One of the cartoon illustrations, with coloured shapes behind it.
+
+  Usage (in any page or layout):
+    {% include illustration.html src="/assets/img/illustrations/home.webp" alt="Cartoon of Alice thinking" %}
+
+  Options:
+    src     path of the image (illustrations live in assets/img/illustrations/)
+    alt     short description, read by screen readers
+    style   colours of the shapes behind: "yellow" (default), "blue" or "red"
+    offset  colour of the offset outline around the drawing:
+            "red" (default), "orange", "blue", "green" or "yellow"
+  The colours are defined in assets/css/site.css (sections 1 and 5).
+
+  Shapes: to swap the thin triangle for a half moon, comment out the
+  <polygon class="shape-accent"> line and uncomment the <path> line below it.
+{%- endcomment -%}
+<figure class="illustration illustration--{{ include.style | default: 'yellow' }} offset--{{ include.offset | default: 'red' }}">
+  <svg class="illustration-shapes" viewBox="0 0 400 520" aria-hidden="true">
+    <circle class="shape-main"   cx="215" cy="215" r="150"/>
+    <polygon class="shape-second" points="40,470 175,250 300,470"/>
+    <circle class="shape-third"  cx="335" cy="95"  r="34"/>
+    <polygon class="shape-accent" points="70,40 82,250 58,250"/>
+    <!-- <path class="shape-accent" d="M70,80 a40,40 0 1,0 0,80 a28,40 0 1,1 0,-80 z"/> -->
+    <line   class="shape-line"   x1="10"  y1="345" x2="390" y2="300"/>
+    <line   class="shape-line"   x1="300" y1="20"  x2="365" y2="500"/>
+  </svg>
+  <img src="{{ include.src | relative_url }}" alt="{{ include.alt }}">
+</figure>

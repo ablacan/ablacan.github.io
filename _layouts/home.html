@@ -1,20 +1,36 @@
 ---
 layout: base
 ---
+{%- comment -%}
+  Home page layout. The text comes from index.md, the updates from _data/news.yml.
+  The illustration is set in the front matter of index.md:
+    illustration, illustration_alt, and optionally illustration_offset (red, orange, blue, green, yellow).
+{%- endcomment -%}
 
 <div class="home">
-  {{ content }}
 
-  <section class="updates" aria-labelledby="updates-heading">
-    <h2 id="updates-heading" class="updates-heading">Updates</h2>
-    <ul class="updates-list">
+  <section class="hero">
+    <div class="hero-text">
+      {{ content }}
+    </div>
+    {%- if page.illustration %}
+    {% include illustration.html src=page.illustration alt=page.illustration_alt style="yellow" offset=page.illustration_offset %}
+    {%- endif %}
+  </section>
+
+  <section class="clipping" aria-labelledby="updates-heading">
+    <header class="clipping-head">
+      <h2 id="updates-heading" class="clipping-title">Updates</h2>
+    </header>
+    <ul class="clipping-list">
       {%- for item in site.data.news %}
       <li>
-        <span class="updates-when">{{ item.when }}</span>
-        <span class="updates-text">{{ item.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}
+        <span class="clipping-when">{{ item.when }}</span>
+        <span class="clipping-text">{{ item.text | markdownify | remove: '<p>' | remove: '</p>' | strip }}
           {%- if item.link %} <a href="{{ item.link }}" target="_blank" rel="noopener">→</a>{% endif %}</span>
       </li>
       {%- endfor %}
     </ul>
   </section>
+
 </div>

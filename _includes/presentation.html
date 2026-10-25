@@ -7,7 +7,7 @@
   {%- if pres.video or pres.link or pres.description %}
   <div class="talk-links">
     {%- if pres.video %}<a class="btn-video" href="{{ pres.video }}" target="_blank" rel="noopener">&#9654; Video</a>{% endif -%}
-    {%- if pres.link %}<a href="{{ pres.link }}" target="_blank" rel="noopener">Link</a>{% endif -%}
+    {%- if pres.link %}<a class="arrow-link" href="{{ pres.link }}" target="_blank" rel="noopener">Link</a>{% endif -%}
     {%- if pres.description %}
     <details class="talk-details">
       <summary>Summary</summary>

@@ -1,10 +1,27 @@
 ---
 layout: base
 ---
+{%- comment -%}
+  Layout of all inner pages (Research, Publications, ...).
+  Optional front matter, to show a header with an illustration:
+    intro:               short text under the title (Markdown allowed)
+    illustration:        image path, e.g. /assets/img/illustrations/papers.webp
+    illustration_alt:    short description of the image
+    illustration_style:  colours of the shapes behind: yellow, blue or red
+    illustration_offset: outline colour: red, orange, blue, green or yellow
+{%- endcomment -%}
 <article class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
+  <header class="post-header{% if page.illustration %} page-hero{% endif %}">
+    <div class="page-hero-text">
+      <h1 class="post-title">{{ page.title | escape }}</h1>
+      {%- if page.intro %}
+      <div class="page-intro">{{ page.intro | markdownify }}</div>
+      {%- endif %}
+    </div>
+    {%- if page.illustration %}
+    {% include illustration.html src=page.illustration alt=page.illustration_alt style=page.illustration_style offset=page.illustration_offset %}
+    {%- endif %}
   </header>
 
   <div class="post-content">
