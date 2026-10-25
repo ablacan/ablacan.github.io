@@ -10,7 +10,7 @@ I tackled challenges in different modalities such as computer vision, tabular da
 <section class="topic" markdown="1">
 ## Characterization of clinical trajectories <span class="topic-when">2025 – now</span>
 
-At [CBIO](https://cbio.mines-paristech.fr/) (Mines Paris – PSL & Institut Curie), I work with Eloïse Berson on **longitudinal electronic health records (EHR)**.
+At [CBIO](https://cbio.mines-paristech.fr/) (Mines Paris – PSL & Institut Curie), I work with [Eloïse Berson](https://elo-nsrb.github.io/eloiseberson/team.html) on **longitudinal electronic health records (EHR)**.
 I build **deep sequential models** (GRU, transformer, neural ODEs) that predict **patient survival** from sparse, irregular follow-up data, and study how foundation models can help design better patient cohorts for biomedical discovery. The main focus of the project is to then be able to **characterize patients trajectories** for long-term illnesses such as cognitive decline (e.g., Alzheimer's disease), with also a parallel interest in mid-term cancer such as breast, lung, pancreatic and brain cancers. Since 2026 this work is funded by a PR[AI]RIE AI Fellowship.
 </section>
 

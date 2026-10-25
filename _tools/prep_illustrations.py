@@ -34,7 +34,6 @@ DRAWINGS = {
     "cv_illustration.jpeg": "cv",
     "teaching_illustration.jpeg": "teaching",
     "presentation_illustration_1.png": "talk",
-    "presentation_illustration_2.png": "talk-front",
 }
 
 MAX_SIZE = (600, 900)   # max width, height in pixels

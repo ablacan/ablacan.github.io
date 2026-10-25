@@ -3,10 +3,11 @@
     <h3 class="pub-title">{{ pub.title }}</h3>
     <p class="pub-authors">{{ pub.authors | replace: "Alice Lacan", "<strong>Alice Lacan</strong>" }}</p>
     <p class="pub-venue"><em>{{ pub.venue }}</em>, {{ pub.year }}</p>
-    {%- if pub.abstract or pub.doi or pub.preprint %}
+    {%- if pub.doi or pub.preprint or pub.code %}
     <div class="pub-links">
       {%- if pub.doi %}<a href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener">DOI</a>{% endif -%}
       {%- if pub.preprint %}<a href="{{ pub.preprint }}" target="_blank" rel="noopener">Preprint</a>{% endif -%}
+      {%- if pub.code %}<a href="{{ pub.code }}" target="_blank" rel="noopener">Code</a>{% endif -%}
     </div>
     {%- endif %}
     {%- if pub.abstract %}
