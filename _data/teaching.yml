@@ -1,0 +1,86 @@
+# Teaching, most recent first. `current: true` puts the course under "This year".
+# role: Lecturer (lectures + practical sessions) | Teaching assistant | Mentoring
+
+- year: "2027"
+  current: true
+  role: Lecturer
+  course: Introductory Statistics
+  hours: 21
+  level: 1st year, Bachelor of Science in AI (IBSAI)
+  institution: Université Paris Sciences & Lettres (PSL)
+  location: Paris
+
+- year: "2026"
+  current: true
+  role: Lecturer
+  course: Advanced Statistics
+  hours: 21
+  level: 2nd year, Bachelor of Science in AI (IBSAI)
+  institution: Université Paris Sciences & Lettres (PSL)
+  location: Paris
+
+- year: "2026"
+  current: true
+  role: Teaching assistant
+  course: Linear Algebra
+  hours: 42
+  level: 1st year, Bachelor of Science in AI (IBSAI)
+  institution: Université Paris Sciences & Lettres (PSL)
+  location: Paris
+
+- year: "2026"
+  current: true
+  role: Teaching assistant
+  course: Fundamentals in Machine Learning
+  hours: 30
+  level: Executive education (Mines PSL Exed), for Dassault Systèmes
+  institution: Dassault Systèmes
+  location: Vélizy-Villacoublay
+
+- year: "2023 – 2024"
+  role: Teaching assistant
+  course: Deep Learning
+  hours: 15
+  level: Master 2, Computer and Network Systems
+  institution: Université d'Évry
+  location: Évry
+
+- year: "2023 – 2024"
+  role: Teaching assistant
+  course: Machine Learning
+  hours: 10
+  level: Master 1, Computer Science
+  institution: ENSIIE
+  location: Évry
+
+- year: "2022 – 2023"
+  role: Mentoring
+  course: Deep Learning projects
+  hours: 7
+  level: Master 2, Computer and Network Systems
+  institution: Université d'Évry
+  location: Évry
+
+- year: "2022 – 2023"
+  role: Teaching assistant
+  course: Deep Learning
+  hours: 15
+  level: Master 2, Computer and Network Systems
+  institution: Université d'Évry
+  location: Évry
+
+- year: "2022 – 2023"
+  role: Teaching assistant
+  course: Machine Learning
+  hours: 10
+  level: Master 1, Computer Science
+  institution: ENSIIE
+  location: Évry
+
+- year: "2021"
+  role: Teaching assistant
+  course: Linear Algebra
+  hours: 64
+  level: Bachelor, Economics
+  institution: Laboratoire de Mathématiques d'Orsay
+  location: Orsay

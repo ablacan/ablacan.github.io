@@ -1,5 +1,5 @@
-<ul class="social-media-list">
-    {%- for entry in site.minima.social_links -%}
-      {%- include social-item.html item = entry -%}
-    {%- endfor -%}
-    </ul>
+<ul class="footer-links">
+  {%- for link in site.social_links %}
+  <li><a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.name }}</a></li>
+  {%- endfor %}
+</ul>

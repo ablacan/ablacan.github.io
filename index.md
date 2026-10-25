@@ -1,31 +1,24 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home 
-title: Alice Lacan
+layout: home
+title: Home
 ---
 
-# Welcome to my personal website 
+<div class="intro" markdown="1">
 
-Here are some information about me and, mostly, my work.
-Feel free to explore and learn more about my work and thoughts!
+# Alice Lacan, Ph.D.
+{: .intro-name}
 
+Junior AI Fellow · CBIO, Mines Paris - PSL & Institut Curie
+{: .intro-role}
 
-## About Me
+I am now a Junior AI Fellow, funded by a 3-year PR[AI]RIE AI Fellowship. I work with [Eloïse Berson](https://elo-nsrb.github.io/eloiseberson/team.html) at the Centre for Computational Biology ([CBIO](https://www.minesparis.psl.eu/cbio/)) at Mines Paris - PSL & Institut Curie (unit U1331), while also teaching in the International Bachelor of Science in AI (IBSAI) from Univ. PSL. 
 
-#TODO
+I work on generative modelling and more general deep learning approaches for **biomedical data**, from epidemiologic data, gene expression profiles to longitudinal electronic health records (EHRs). I have expertise on **scarce, irregular and high-dimensional medical data**, such as tabular data or long token sequences for instance.
 
-## Recent Posts
-
-Welcome to my website!
-
-## More info
-
-- [About Me]({% link about.md %})
-- [My Research]({% link research.md %})
-- [My Publications]({% link publications.md %})
-- [Contact Me]({% link contact.md %})
+From 2021 to 2024, I completed my **PhD in Computer Science** at Univ. Paris-Saclay, in the Arobas team (IBISC) & TAU team (Inria). My thesis focused on generating synthetic transcriptomics (bulk-RNA data) via deep generative models (VAEs, GANs, diffusion) for downstream data augmentation and cancer classification tasks.
 
 
+[Research]({{ '/research/' | relative_url }}) · [Publications]({{ '/publications/' | relative_url }}) · [Teaching]({{ '/teaching/' | relative_url }}) · [CV]({{ '/cv/' | relative_url }})
+{: .intro-links}
 
+</div>

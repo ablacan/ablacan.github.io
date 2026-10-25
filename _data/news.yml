@@ -1,0 +1,23 @@
+# Updates shown on the home page. Newest first: add new items at the top.
+# `when` is displayed as written; `link` is optional.
+
+- when: Sep 2026
+  text: Started as **Junior AI Fellow** at CBIO (Mines Paris – PSL & Institut Curie), funded by a 3-year **PR[AI]RIE AI Fellowship**.
+
+- when: May 2026
+  text: "Our paper on diffusion models for gene expression data is out in **BMC Bioinformatics**."
+  link: https://doi.org/10.1186/s12859-026-06470-8
+
+- when: Sep 2025
+  text: Joined CBIO (Mines Paris - PSL & Institut Curie) as a **postdoctoral researcher**.
+
+- when: March 2025
+  text: "Invited speaker at Women in STEM EUROPE launch event"
+  link: https://lnkd.in/p/euk-nMDv
+
+- when: Feb 2025
+  text: Defended my **PhD** at Université Paris-Saclay on deep generative models for transcriptomics.
+
+- when: Sep 2024
+  text: "Presented GMDA, our frugal generative model for tabular data, at **ECML-PKDD 2024**."
+  link: https://doi.org/10.1007/978-3-031-70371-3_4

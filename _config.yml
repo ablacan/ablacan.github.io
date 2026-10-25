@@ -13,12 +13,13 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: The Wonderland of Research
+title: Alice Lacan
 author:
-  name: ablacan
+  name: Alice Lacan
   email: alice.b.lacan@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Welcome to my personal website with information on me and, mostly, my work.
+  Alice Lacan, Ph.D. — Junior AI Fellow at CBIO (Mines Paris – PSL & Institut Curie).
+  Generative AI, computational biology and teaching.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ablacan.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  ablacan
@@ -34,10 +35,29 @@ plugins:
 # If you want to link only specific pages in your header, use this and add the path to the pages
 # in order as they should show up.
 header_pages:
-  - about.md
   - research.md
   - publications.md
+  - presentations.md
+  - teaching.md
+  - cv.md
   - contact.md
+
+# Links shown in the footer (see _includes/footer.html)
+social_links:
+  - { name: Google Scholar, url: "https://scholar.google.com/citations?user=9G7453EAAAAJ&hl=fr" }
+  - { name: GitHub,         url: "https://github.com/ablacan" }
+  - { name: LinkedIn,       url: "https://www.linkedin.com/in/alice-lacan/" }
+
+# Publications and presentations are listed on their own pages:
+# one file per entry, no individual page generated.
+collections:
+  publications:
+    output: false
+  presentations:
+    output: false
+
+sass:
+  style: compressed
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

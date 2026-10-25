@@ -1,0 +1,131 @@
+# Content of the CV page (cv.md), taken from the LaTeX CV (academic_cv_v2/main.tex).
+# Each section has a list of entries: date, title, org, place, details (all optional except title).
+
+- section: Professional experience
+  entries:
+    - date: 2026 –
+      title: Junior AI Fellow Researcher
+      org: CBIO, Mines Paris - PSL & Institut Curie
+      place: Paris, France
+    - date: 2025 – 2026
+      title: Postdoctoral Researcher
+      org: CBIO, Mines Paris - PSL & Institut Curie
+      place: Paris, France
+      details: "Supervisor: Eloïse Berson"
+    - date: 2024 (5 months)
+      title: AI Engineer for Numerical Simulations
+      org: NPCo (ex-Augur), Inria Start-Up Studio
+      place: Saclay, France
+      details: "Start-up founders: Emmanuel Menier and Matthieu Nastorg"
+    - date: 2021 – 2024
+      title: PhD in Computer Science
+      org: IBISC / Inria, Univ. Paris-Saclay
+      place: Saclay, France
+      details: "Thesis: <em>Transcriptomics data generation with deep generative models</em>. \n Supervisors: Blaise Hanczar and Michèle Sebag"
+    - date: 2021 (6 months)
+      title: Research intern - Forecasting and controlling the Covid-19 pandemic
+      org: Inria
+      place: Saclay, France
+      details: "Supervisors: Isabelle Guyon and Michèle Sebag"
+    - date: 2020 (6 months)
+      title: Credit risk model validation intern
+      org: Dexia
+      place: Courbevoie, France
+    - date: 2019 (6 months)
+      title: Research intern - Deep learning for binary galaxy images classification
+      org: Cosmostat, CEA
+      place: Saclay, France
+      details: "Supervisor: Samuel Farrens"
+      link: http://www.cosmostat.org/people/alice-lacan
+    - date: 2018 (3 months)
+      title: Content and data management intern
+      org: Blue Pie Production
+      place: Sydney, Australia
+
+- section: Education
+  entries:
+    - date: 2021 – 2024
+      title: PhD in Computer Science
+      org: Univ. Paris-Saclay
+      place: Saclay, France
+    - date: 2020 – 2021
+      title: Master 2 in Artificial Intelligence
+      org: Univ. Paris-Saclay
+      place: Saclay, France
+      details: With high honors
+    - date: 2018 – 2019
+      title: Master 1 in Econometrics and Statistics
+      org: Univ. Paris 1 – Panthéon Sorbonne
+      place: Paris, France
+      details: With high honors
+    - date: 2015 – 2018
+      title: Bachelor in Economics
+      org: Univ. Paris 1 – Panthéon Sorbonne
+      place: Paris, France
+      details: With honors
+    - date: "2015"
+      title: Scientific high school diploma
+      org: Lycée Louis-le-Grand
+      place: Paris, France
+      details: With high honors
+
+- section: Awards
+  entries:
+    - date: "2026"
+      title: PR[AI]RIE AI Fellowship (3 years)
+      details: Competitive grant from the Paris School of AI (PSAI) – PR[AI]RIE for junior and senior postdoctoral fellowships
+    - date: "2021"
+      title: UDOPIA and Labex Digicosme grants (3 years)
+      details: Competitive grants for PhD funding
+
+- section: Supervision
+  entries:
+    - date: 2025 – 2026
+      title: One PhD student (co-supervised)
+    - date: 2023 – 2024
+      title: Two MSc interns (co-supervised)
+
+- section: Academic service
+  entries:
+    - date: Ongoing
+      title: "Reviewer: Briefings in Bioinformatics, ICML, ICANN"
+    - date: "2024"
+      title: Scientific workshop moderator
+      org: International Day for Women, Univ. Évry
+    - date: "2024"
+      title: Interview - Portraits of female PhD students
+      org: Univ. Évry
+      link: https://www.linkedin.com/posts/alice-lacan_univevry-interview-portrait-activity-7169273226752163840-QoUr
+    - date: "2022"
+      title: Main organizer, chair, reviews & sponsors coordinator
+      org: NewInML Workshop @ ICML 2022
+      link: https://ablacan.github.io/NewInML2022_ICML/
+    - date: "2021"
+      title: Organizer and chair
+      org: UDOPIA PhD Days
+      link: https://www.dataia.eu/evenements/1ere-journee-annuelle-des-etudiants-udopia
+
+- section: Machine learning challenges
+  entries:
+    - date: "2021"
+      title: Sartorius Kaggle Challenge
+      details: Instance segmentation of brain cells
+    - date: "2020"
+      title: XPRIZE Pandemic Response Challenge
+      details: Covid-19 forecasting (finalist)
+    - date: "2018"
+      title: KPMG Fake News Challenge
+      details: Ranked 6th
+
+- section: Skills
+  entries:
+    - date: Coding
+      title: Python · SQL · MATLAB · Unix/Bash · LaTeX · Multi-GPU · SLURM
+    - date: Languages
+      title: French (native) · English (fluent, TOEFL iBT 108) · Spanish (intermediate) · Mandarin Chinese (beginner)
+
+- section: Interests
+  entries:
+    - title: Video editing, flying drones, theatre, cinema, travelling, swimming & running;
+    - title: Volunteering teaching and fundraising in Arusha, Tanzania (2020); 
+    - title: English teacher at Momji, France (2015 - 2020)

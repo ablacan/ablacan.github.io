@@ -1,0 +1,164 @@
+/* Site-wide styles, loaded after minima's main.css (see _includes/head.html). */
+
+:root {
+  --ink: #1d1d1f;
+  --muted: #5f6368;
+  --line: #e4e1da;
+  --paper: #fbfaf7;
+  --card: #ffffff;
+  --blue: #1f4fa3;
+  --red: #d6402b;
+  --yellow: #f2c230;
+}
+
+body { background: var(--paper); color: var(--ink); }
+.site-header { border-top-color: var(--ink); background: var(--paper); }
+.site-title, .site-title:visited { color: var(--ink); }
+a { color: var(--blue); }
+.post-content h2 { font-size: 1.5rem; }
+
+/* Section headings used in lists (publications, teaching, CV) */
+.list-heading {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 1.8rem 0 0.7rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid var(--ink);
+}
+.note { color: var(--muted); font-size: 0.9rem; }
+
+/* ---- Home ---- */
+.intro { margin-bottom: 2rem; }
+.intro-name { font-size: 2.2rem; margin-bottom: 0.2rem; }
+.intro-role { color: var(--muted); font-size: 1.05rem; margin-bottom: 1.2rem; }
+.intro-links { font-weight: 600; }
+
+.updates {
+  background: var(--card);
+  border: 2px solid var(--ink);
+  box-shadow: 6px 6px 0 var(--yellow);
+  padding: 1rem 1.25rem;
+  margin: 2rem 0;
+}
+.updates-heading {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.6rem;
+}
+.updates-list { list-style: none; margin: 0; }
+.updates-list li {
+  display: flex;
+  gap: 1rem;
+  padding: 0.45rem 0;
+  border-top: 1px solid var(--line);
+  line-height: 1.45;
+}
+.updates-when {
+  flex: 0 0 5.5rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--red);
+}
+
+/* ---- Publications ---- */
+.pub {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--blue);
+  border-radius: 4px;
+  padding: 0.7rem 1rem;
+  margin-bottom: 0.7rem;
+}
+.pub-body { flex: 1; min-width: 0; }
+.post-content .pub-title { font-size: 1.02rem; margin: 0 0 0.2rem; line-height: 1.35; }
+.pub-authors, .pub-venue { margin: 0; font-size: 0.9rem; line-height: 1.4; color: var(--muted); }
+.pub-authors strong { color: var(--ink); }
+.pub-links { margin-top: 0.3rem; font-size: 0.85rem; }
+.pub-links a, .talk-links a { margin-right: 0.8rem; font-weight: 600; }
+.pub-abstract, .talk-details { margin-top: 0.3rem; font-size: 0.88rem; }
+.pub-abstract summary, .talk-details summary { cursor: pointer; color: var(--blue); font-weight: 600; }
+.pub-abstract p, .talk-details p { margin: 0.4rem 0 0; text-align: justify; line-height: 1.5; }
+.pub-pdf { flex: 0 0 auto; color: var(--red); margin-top: 0.15rem; transition: transform 0.15s; }
+.pub-pdf:hover { transform: rotate(-6deg) scale(1.08); }
+
+/* ---- Presentations ---- */
+.timeline-year { display: flex; gap: 1.2rem; }
+.post-content .timeline-year .year {
+  flex: 0 0 3.5rem;
+  font-size: 1.1rem;
+  margin: 0.6rem 0 0;
+}
+.talks { list-style: none; margin: 0 0 0.6rem; flex: 1; min-width: 0; border-left: 2px solid var(--ink); padding-left: 1rem; }
+.talk { padding: 0.55rem 0; border-bottom: 1px solid var(--line); }
+.talk:last-child { border-bottom: 0; }
+.talk-head { display: flex; gap: 0.6rem; align-items: baseline; }
+.post-content .talk-title { font-size: 1rem; margin: 0; line-height: 1.35; }
+.talk-event { margin: 0.15rem 0 0; font-size: 0.88rem; color: var(--muted); line-height: 1.4; }
+.talk-links { margin-top: 0.25rem; font-size: 0.85rem; }
+.btn-video { color: var(--red) !important; }
+
+.tag {
+  flex: 0 0 auto;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.1rem 0.45rem;
+  border-radius: 3px;
+  /* Highlighted events (invited talk, organizer, ...) by default */
+  color: var(--ink);
+  background: var(--yellow);
+}
+.tag--talk { background: var(--blue); color: #fff; }
+.tag--poster { background: var(--red); color: #fff; }
+
+/* ---- Teaching ---- */
+.courses { list-style: none; margin: 0; }
+.course { display: flex; gap: 1rem; padding: 0.5rem 0; border-bottom: 1px solid var(--line); }
+.course-year { flex: 0 0 6.5rem; font-weight: 700; font-size: 0.9rem; color: var(--red); padding-top: 0.1rem; }
+.course-body { flex: 1; min-width: 0; }
+.post-content .course-title { font-size: 1rem; margin: 0; }
+.course-hours { font-size: 0.75rem; font-weight: 700; background: var(--yellow); padding: 0.05rem 0.4rem; border-radius: 3px; margin-left: 0.3rem; }
+.course-meta { margin: 0.1rem 0 0; font-size: 0.88rem; color: var(--muted); line-height: 1.4; }
+
+/* ---- CV ---- */
+.cv-actions { display: flex; flex-wrap: wrap; gap: 0.6rem 1rem; align-items: center; font-size: 0.9rem; color: var(--muted); }
+.btn {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  border: 2px solid var(--ink);
+  background: var(--yellow);
+  color: var(--ink) !important;
+  font-weight: 700;
+  text-decoration: none !important;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+.btn:hover { transform: translate(1px, 1px); box-shadow: 2px 2px 0 var(--ink); }
+.cv-section .list-heading { margin-top: 1.5rem; }
+.cv-entry { display: flex; gap: 1rem; padding: 0.3rem 0; line-height: 1.4; }
+.cv-date { flex: 0 0 8rem; font-size: 0.88rem; color: var(--muted); padding-top: 0.05rem; }
+.cv-body { flex: 1; min-width: 0; }
+.cv-title { font-weight: 600; }
+.cv-org, .cv-details { display: block; font-size: 0.9rem; color: var(--muted); }
+.cv-link { font-size: 0.8rem; }
+
+/* ---- Research ---- */
+.topic { margin-bottom: 1.6rem; }
+.topic h2 { margin-bottom: 0.4rem; }
+.topic p { text-align: justify; }
+.topic-when { font-size: 0.8rem; font-weight: 600; color: var(--red); margin-left: 0.4rem; white-space: nowrap; }
+
+/* ---- Footer ---- */
+.footer-links { list-style: none; margin: 0; }
+.footer-links li { display: inline; margin-right: 1rem; }
+
+/* ---- Small screens ---- */
+@media (max-width: 600px) {
+  .updates-list li, .course, .cv-entry, .timeline-year { flex-direction: column; gap: 0.15rem; }
+  .updates-when, .course-year, .cv-date, .timeline-year .year { flex-basis: auto; }
+  .talk-head { flex-direction: column; gap: 0.2rem; }
+}

@@ -1,0 +1,19 @@
+<li class="talk talk--{{ pres.category }}">
+  <div class="talk-head">
+    <span class="tag tag--{{ pres.kind | slugify }}">{{ pres.kind }}</span>
+    <h3 class="talk-title">{{ pres.title }}</h3>
+  </div>
+  <p class="talk-event">{{ pres.event }}{% if pres.location %} · {{ pres.location }}{% endif %}</p>
+  {%- if pres.video or pres.link or pres.description %}
+  <div class="talk-links">
+    {%- if pres.video %}<a class="btn-video" href="{{ pres.video }}" target="_blank" rel="noopener">&#9654; Video</a>{% endif -%}
+    {%- if pres.link %}<a href="{{ pres.link }}" target="_blank" rel="noopener">Link</a>{% endif -%}
+    {%- if pres.description %}
+    <details class="talk-details">
+      <summary>Summary</summary>
+      <p>{{ pres.description }}</p>
+    </details>
+    {%- endif %}
+  </div>
+  {%- endif %}
+</li>

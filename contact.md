@@ -4,12 +4,17 @@ title: Contact
 permalink: /contact/
 ---
 
-Do not hesitate to contact me, I am always happy to discuss!
+Do not hesitate to contact me, I am always happy to discuss research topics, teaching opportunities or major topics that are dear to me like AI safety or women in STEM fields!
 
 ## Emails
 - Personal (best): alice(dot)b(dot)lacan(at)gmail(dot)com
-- Academic 1 (current): alice-athenais(dot)lacan(at)inria(dot)fr
-- Academic 2 (soon out-of-date): alice(dot)lacan(at)univ-evry(dot)fr
+- Academic 1 (current): alice(dot)lacan(at)minesparis(dot)psl(dot)eu
+- Academic 2 (current): alice(dot)lacan(at)curie(dot)fr
+- Teaching (current): alice(dot)lacan(at)psl(dot)fr
+
+Out-of-date:
+- Former Inria:  alice-athenais(dot)lacan(at)inria(dot)fr
+- Former Univ. Evry: alice(dot)lacan(at)univ-evry(dot)fr
 
 ## Office: 
-You can find me at the IBGBI building in Evry, in the building 660 in Gif-sur-Yvette (facing ENS Paris-Saclay) usually on Tuesdays, and in the Alan Turing building in Palaiseau.
+You can find me in Room M301 (3rd floor) in the Mines Paris building (60 Bd Saint-Michel, Paris).
