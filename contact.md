@@ -12,7 +12,6 @@ I am always happy to discuss research topics, teaching opportunities or major to
 ## Emails
 {: .sticker}
 
-- **Personal (best):** {% include email.html user="alice.b.lacan" domain="gmail.com" %}
 - **Academic 1 (current):** {% include email.html user="alice.lacan" domain="minesparis.psl.eu" %}
 - **Academic 2 (current):** {% include email.html user="alice.lacan" domain="curie.fr" %}
 - **Teaching (current):** {% include email.html user="alice.lacan" domain="psl.fr" %}
