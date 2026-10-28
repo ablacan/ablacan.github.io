@@ -14,7 +14,7 @@ I am always happy to discuss research topics, teaching opportunities or major to
 
 - **Academic 1 (current):** {% include email.html user="alice.lacan" domain="minesparis.psl.eu" %}
 - **Academic 2 (current):** {% include email.html user="alice.lacan" domain="curie.fr" %}
-- **Teaching (current):** {% include email.html user="alice.lacan" domain="psl.fr" %}
+- **Teaching (current):** {% include email.html user="alice.lacan" domain="psl.eu" %}
 
 <span class="warning">Out-of-date:</span> my former Inria and Univ. Évry addresses are no longer read.
 
